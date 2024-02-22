@@ -40,6 +40,7 @@ const repoFetch = async function () {
   );
   const repoData = await request.json();
   repoInfo(repoData);
+  console.log(repoData);
 };
 
 // Displays list of repos
@@ -89,6 +90,7 @@ const displayRepoInfo = function (repoInfo, languages) {
      <a class="visit" href="${
        repoInfo.html_url
      }" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
+      <a class="visit" href="https://${username}.github.io/${repoInfo.name}" target="_blank" rel="noreferrer noopener">View on GitHub Pages!</a>
     `;
   repoData.append(repoInfoDiv);
   repoData.classList.remove("hide");
