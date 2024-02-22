@@ -39,7 +39,7 @@ h1 {
     width: 100%;
     padding: 1em 0.5em;
     margin: 0;
-    font-size: 3.5em;
+    font-size: 3em;
     text-align: center;
     font-family: "Oswald", sans-serif;
     background-color: #483978;
@@ -178,7 +178,7 @@ section.repo-data {
 }
 
 .repo-list h3 {
-    text-align: left;
+    text-align: center;
     margin: 0;
     padding: 10px;
 }

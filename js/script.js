@@ -17,6 +17,7 @@ gitFetch();
 
 const displayInfo = function (data) {
   const userInfo = document.createElement("div");
+  userInfo.classList.add("user-info");
   userInfo.innerHTML = `
         <figure>
             <img alt="user avatar" src=${data.avatar_url} />
