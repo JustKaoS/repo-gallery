@@ -4,7 +4,7 @@ const reposElement = document.querySelector(".repos");
 const repoData = document.querySelector(".repo-data");
 const button = document.querySelector(".view-repos");
 const filterInput = document.querySelector(".filter-repos");
-const username = `daniel-r-mott`;
+const username = `thatdylandude`;
 
 // Fetches Github user data for username
 const gitFetch = async function () {
@@ -15,6 +15,7 @@ const gitFetch = async function () {
 
 gitFetch();
 
+// Displays github user data
 const displayInfo = function (data) {
   const userInfo = document.createElement("div");
   userInfo.classList.add("user-info");
@@ -54,6 +55,8 @@ const repoInfo = function (repos) {
   }
 };
 
+
+// When repo is clicked in list
 repoListElement.addEventListener("click", function (e) {
   if (e.target.matches("h3")) {
     const repoName = e.target.innerText;
@@ -79,6 +82,7 @@ const getInfo = async function (repoName) {
   displayRepoInfo(repoInfo, languages);
 };
 
+// Displays repo details
 const displayRepoInfo = function (repoInfo, languages) {
   repoData.innerHTML = "";
   const repoInfoDiv = document.createElement("div");
@@ -98,12 +102,14 @@ const displayRepoInfo = function (repoInfo, languages) {
   button.classList.remove("hide");
 };
 
+// Returns to main repo list
 button.addEventListener("click", function() {
     reposElement.classList.remove("hide");
     repoData.classList.add("hide");
     button.classList.add("hide");
 });
 
+// Dynamically adjusts repo list based on user input in search box
 filterInput.addEventListener("input", function(e) {
   const searchInput = e.target.value;
   const repos = document.querySelectorAll(".repo");
