@@ -73,15 +73,11 @@ const getInfo = async function (repoName) {
     `https://api.github.com/repos/${username}/${repoName}/languages`
   );
   const languageData = await requestLanguage.json();
-  const requestPages = await fetch(
-    `https://api.github.com/repos/${username}/${repoName}/pages`
-  );
-  const pagesData = await requestPages.json();
+
   const languages = [];
   for (const language in languageData) {
     languages.push(language);
   }
-  console.log(pagesData);
   displayRepoInfo(repoInfo, languages);
 };
 
@@ -94,12 +90,14 @@ const displayRepoInfo = function (repoInfo, languages) {
     <p>Description: ${repoInfo.description}</p>
     <p>Default Branch: ${repoInfo.default_branch}</p>
     <p>Languages: ${languages.join(", ")}</p>
-     <a class="visit" href="${
-       repoInfo.html_url
-     }" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
-     <a class="visit" href="https://${username}.github.io/${repoInfo.name}" target="_blank" rel="noreferrer noopener">View on GitHub Pages!</a>
-    `;
+     <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
+`
+if (repoInfo.has_pages) {
+repoInfoDiv.innerHTML += `<a class="visit" href="https://${username}.github.io/${
+  repoInfo.name
+}" target="_blank" rel="noreferrer noopener">View on GitHub Pages!</a>`
 
+  }
   repoData.append(repoInfoDiv);
   repoData.classList.remove("hide");
   reposElement.classList.add("hide");
