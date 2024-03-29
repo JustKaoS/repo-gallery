@@ -1,14 +1,35 @@
+
+@font-face {
+    font-family: 'CascadiaCode';
+    src: url('../font/CascadiaCode.ttf') format('embedded-opentype'), /* Internet Explorer */
+         url('../font/CascadiaCode.ttf') format('woff2'),             /* Super Modern Browsers */
+         url('../font/CascadiaCode.ttf') format('woff'),              /* Pretty Modern Browsers */
+         url('../font/CascadiaCode.ttf') format('truetype'),          /* Safari, Android, iOS */
+         url('../font/CascadiaCode.ttf') format('svg');               /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'CascadiaCodeSB';
+    src: url('../font/CascadiaCode-SemiBold.ttf') format('embedded-opentype'), /* Internet Explorer */
+         url('../font/CascadiaCode-SemiBold.ttf') format('woff2'),             /* Super Modern Browsers */
+         url('../font/CascadiaCode-SemiBold.ttf') format('woff'),              /* Pretty Modern Browsers */
+         url('../font/CascadiaCode-SemiBold.ttf') format('truetype'),          /* Safari, Android, iOS */
+         url('../font/CascadiaCode-SemiBold.ttf') format('svg');               /* Legacy iOS */
+}
+
 * {
     box-sizing: border-box;
 }
+
+
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
-    background-color: #fbf9de;
+    font-family: "CascadiaCode", sans-serif;
+    background-color: #43423d;
     color: #333;
     font-size: 16px;
 }
@@ -27,12 +48,14 @@ body {
 }
 
 .fa-github-alt {
-    color: #f86d58;
+    color: #eabda8;
 }
 
 img {
-    max-width: 100%;
+    max-width: 150%;
+    margin-right: 150px;
     height: auto;
+    border: 10px solid #f7f3e3;
 }
 
 h1 {
@@ -41,36 +64,13 @@ h1 {
     margin: 0;
     font-size: 3em;
     text-align: center;
-    font-family: "Oswald", sans-serif;
-    background-color: #483978;
-    color: #fff;
-    text-transform: uppercase;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    font-family: "CascadiaCodeSB", sans-serif;
+    background-color: #4d7298;
+    color: #d0efb1;
+    text-transform: none;
+border-radius: 20px;
 }
 
-.badge {
-    height: 80px;
-    width: 50px;
-    background-color: grey;
-    z-index: 98;
-    margin-bottom: -35px;
-    margin-top: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.circle {
-    width: 20px;
-    height: 20px;
-    background-color: #483978;
-    border-radius: 100%;
-    z-index: 99;
-    align-self: center;
-    margin-top: auto;
-    margin-bottom: 8px;
-}
 
 .github-img {
     width: 45px;
@@ -78,9 +78,9 @@ h1 {
 }
 
 h3 {
-    width: 100%;
+    width: auto;
     text-align: center;
-    color: #f86d58;
+    color: #f7f3e3;
 }
 
 ul {
@@ -95,6 +95,7 @@ ul {
     flex-wrap: wrap;
     align-items: center;
     width: 90%;
+    margin-top: 50px;
     max-width: 1200px;
 }
 
@@ -103,52 +104,56 @@ ul {
     width: 100%;
 }
 
-.user-info {
+.user-info {  
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    background-color: #483978;
-    color: white;
-    font-size: 18px;
+    justify-content: space-between;
+    background-color: #43423d;
+    color: #f7f3e3;
+    width: 90%;
+    font-size: 1em;
     padding-bottom: 2em;
+    padding: 0 32px;    
+margin: 10px;
 }
 
 .user-info figure {
-    width: 90%;
     max-width: 200px;
 }
 
 .user-info img {
     border-radius: 100%;
+
 }
 
 .user-info div {
-    display: flex;
+    margin-top: 5em;
+    display: inline-flex;
     text-align: center;
     flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    padding-left: 5%;
+    height: 100%;
+
 }
 
 .user-info div p {
     width: 100%;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid #9b8dc9;
-    padding-bottom: 19px;
+    border-bottom: 1px solid #b592a0;
+    padding: 10px 0 5px 0;
 }
 
 .filter-repos {
+    text-align: center;
     width: 300px;
     margin-top: 1em;
     padding: 1em;
     margin-bottom: 1em;
-    border: 2px solid #483978;
+    border: 5px solid #f7f3e3;
 }
 
 section.repo-data {
-    background-color: #fff;
+    background-color: #4d7298;
     padding: 2em;
     padding-bottom: 1em;
 }
@@ -157,9 +162,12 @@ section.repo-data {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #fff;
+    background-color: #4d7298;
+    width: 90%;
     margin-top: 0;
     padding: 2em;
+border: 5px, solid, #f7f3e3;
+border-radius: 20px;
 }
 
 .repo-list {
@@ -171,20 +179,27 @@ section.repo-data {
 }
 
 .repo-list li {
+
     width: 90%;
     margin: 1em 0;
-    border: 1px solid #f86d58;
+    border: 4px solid #f7f3e3;
+    border-radius: 10px;
+    background: #77a6b6;
+    align-items:  center;
+    justify-content: center;
     padding: 0.5em;
+}
+
+.repo-list li:hover {
+    background:#90c8dc;
 }
 
 .repo-list h3 {
     text-align: center;
-    margin: 0;
-    padding: 10px;
+
 }
 
 .repo-list h3:hover {
-    background-color: #eee9ff;
     cursor: pointer;
 }
 
@@ -193,8 +208,15 @@ section.repo-data {
     margin: 0.5em 0;
 }
 
-.repo-data {
-    width: 100%;
+section.repo-data {
+    color: #f7f3e3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    padding: 0;
+    margin:0;
+    border-radius:20px;
 }
 
 .repo-data h3 {
@@ -203,14 +225,14 @@ section.repo-data {
 
 .repo-data .visit {
     text-decoration: none;
-    max-width: 200px;
+    max-width: 225px;
     color: #fff;
     padding: 0.75em;
-    margin-top: 2em;
+    margin-top: 20px;
     cursor: pointer;
     display: block;
-    background-color: #483978;
-    border: 1px solid #483978;
+    background-color: #61988e;
+    border: 1px solid #f7f3e3;
 }
 
 .repo-data .visit:hover {
@@ -218,9 +240,15 @@ section.repo-data {
     border: 1px solid #ccc;
 }
 
+.buttons {
+    padding-bottom: 20px;
+}
 .button-container {
+display: inline-flex;
+justify-content: center;
     width: 100%;
-    background-color: #fff;
+    background-color: #43423d;
+    margin-top: 10px;
     padding-left: 2em;
     padding-bottom: 2em;
 }
@@ -229,6 +257,7 @@ section.repo-data {
     max-width: 200px;
     margin-top: 0;
 }
+
 
 @media (min-width: 700px) {
     .user-info div {
@@ -255,4 +284,8 @@ section.repo-data {
     .repo-list li {
         width: 30%;
     }
+}
+
+strong {
+    color: #eabda8;
 }

@@ -90,15 +90,18 @@ const displayRepoInfo = function (repoInfo, languages) {
     <p>Description: ${repoInfo.description}</p>
     <p>Default Branch: ${repoInfo.default_branch}</p>
     <p>Languages: ${languages.join(", ")}</p>
-     <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
-`
-if (repoInfo.has_pages) {
-repoInfoDiv.innerHTML += `<a class="visit" href="https://${username}.github.io/${
-  repoInfo.name
-}" target="_blank" rel="noreferrer noopener">View on GitHub Pages!</a>`
-
+`;
+  const buttonDiv = document.createElement("div");
+  buttonDiv.classList.add("buttons")
+  buttonDiv.innerHTML = `
+<a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
+`;
+  if (repoInfo.has_pages) {
+    buttonDiv.innerHTML += `<a class="visit" href="https://${username}.github.io/${repoInfo.name}" target="_blank" rel="noreferrer noopener">View on GitHub Pages!</a>`;
   }
-  repoData.append(repoInfoDiv);
+
+  repoData.append(repoInfoDiv)
+  repoData.append(buttonDiv);
   repoData.classList.remove("hide");
   reposElement.classList.add("hide");
   button.classList.remove("hide");
