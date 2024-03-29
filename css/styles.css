@@ -201,6 +201,7 @@ justify-content: center;
 
 .repo-list li:hover {
     background:#90c8dc;
+    cursor: pointer;
 }
 
 .repo-list h3 {
@@ -242,6 +243,7 @@ section.repo-data {
     display: block;
     background-color: #61988e;
     border: 1px solid #f7f3e3;
+    border-radius: 5px;
 }
 
 .repo-data .visit:hover {
