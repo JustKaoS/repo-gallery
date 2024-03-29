@@ -29,7 +29,7 @@ body {
     justify-content: center;
     margin: 0;
     font-family: "CascadiaCode", sans-serif;
-    background-color: #43423d;
+    background-color: #77a6b6;
     color: #333;
     font-size: 16px;
 }
@@ -51,15 +51,9 @@ body {
     color: #eabda8;
 }
 
-img {
-    max-width: 150%;
-    margin-right: 150px;
-    height: auto;
-    border: 10px solid #f7f3e3;
-}
 
 h1 {
-    width: 100%;
+    width: 90%;
     padding: 1em 0.5em;
     margin: 0;
     font-size: 3em;
@@ -68,7 +62,9 @@ h1 {
     background-color: #4d7298;
     color: #d0efb1;
     text-transform: none;
+    border: 4px solid #f7f3e3;
 border-radius: 20px;
+
 }
 
 
@@ -112,47 +108,59 @@ ul {
     color: #f7f3e3;
     width: 90%;
     font-size: 1em;
-    padding-bottom: 2em;
-    padding: 0 32px;    
+    padding-bottom: 0;
+    padding: 0 32px;   
+    border: 4px solid #f7f3e3; 
+    border-radius: 20px;
 margin: 10px;
 }
 
 .user-info figure {
     max-width: 200px;
+    margin: 10px;
+}
+
+.overview {
+    display: flex;
+justify-content: center;
+
 }
 
 .user-info img {
     border-radius: 100%;
+    max-width: 150%;
+    height: auto;
+    border: 4px solid #f7f3e3;
 
 }
 
 .user-info div {
-    margin-top: 5em;
+    margin-top: 2em;
     display: inline-flex;
     text-align: center;
     flex-wrap: wrap;
-    height: 100%;
-
+    height: auto;
 }
 
-.user-info div p {
-    width: 100%;
+.user-info p {
+    width: 90%;
     margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #b592a0;
-    padding: 10px 0 5px 0;
+    size: auto;
 }
 
 .filter-repos {
+    background: #43423d;
+    border-radius: 10px;
+    color: #f7f3e3;
     text-align: center;
     width: 300px;
     margin-top: 1em;
     padding: 1em;
-    margin-bottom: 1em;
+
     border: 5px solid #f7f3e3;
 }
 
-section.repo-data {
+.repo-data {
     background-color: #4d7298;
     padding: 2em;
     padding-bottom: 1em;
@@ -165,10 +173,11 @@ section.repo-data {
     background-color: #4d7298;
     width: 90%;
     margin-top: 0;
-    padding: 2em;
-border: 5px, solid, #f7f3e3;
-border-radius: 20px;
+    padding: 1em;
+    border: 4px, solid, #f7f3e3;
+    border-radius: 20px;
 }
+
 
 .repo-list {
     width: 100%;
@@ -247,7 +256,7 @@ section.repo-data {
 display: inline-flex;
 justify-content: center;
     width: 100%;
-    background-color: #43423d;
+    background-color: #77a6b6;
     margin-top: 10px;
     padding-left: 2em;
     padding-bottom: 2em;
