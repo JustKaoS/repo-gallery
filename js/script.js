@@ -44,14 +44,16 @@ const repoFetch = async function () {
   //console.log(repoData);
 };
 
-// Displays list of repos
+// Displays list of repos if they are not a fork
 const repoInfo = function (repos) {
   filterInput.classList.remove("hide");
   for (const repo of repos) {
-    const repoItem = document.createElement("li");
-    repoItem.classList.add("repo");
-    repoItem.innerHTML = `<h3>${repo.name}<h3>`;
-    repoListElement.append(repoItem);
+    if (!repo.fork) {
+      const repoItem = document.createElement("li");
+      repoItem.classList.add("repo");
+      repoItem.innerHTML = `<h3>${repo.name}<h3>`;
+      repoListElement.append(repoItem);
+    }
   }
 };
 
@@ -92,15 +94,16 @@ const displayRepoInfo = function (repoInfo, languages) {
     <p>Languages: ${languages.join(", ")}</p>
 `;
   const buttonDiv = document.createElement("div");
-  buttonDiv.classList.add("buttons")
+  buttonDiv.classList.add("buttons");
   buttonDiv.innerHTML = `
 <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
 `;
+  // Checks if repo has a ghpages deployment, adds button to visit page
   if (repoInfo.has_pages) {
     buttonDiv.innerHTML += `<a class="visit" href="https://${username}.github.io/${repoInfo.name}" target="_blank" rel="noreferrer noopener">View on GitHub Pages!</a>`;
   }
 
-  repoData.append(repoInfoDiv)
+  repoData.append(repoInfoDiv);
   repoData.append(buttonDiv);
   repoData.classList.remove("hide");
   reposElement.classList.add("hide");

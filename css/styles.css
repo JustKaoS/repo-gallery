@@ -1,302 +1,295 @@
-
 @font-face {
-    font-family: 'CascadiaCode';
-    src: url('../font/CascadiaCode.ttf') format('embedded-opentype'), /* Internet Explorer */
-         url('../font/CascadiaCode.ttf') format('woff2'),             /* Super Modern Browsers */
-         url('../font/CascadiaCode.ttf') format('woff'),              /* Pretty Modern Browsers */
-         url('../font/CascadiaCode.ttf') format('truetype'),          /* Safari, Android, iOS */
-         url('../font/CascadiaCode.ttf') format('svg');               /* Legacy iOS */
+  font-family: "CascadiaCode";
+  src: url("../font/CascadiaCode.ttf") format("embedded-opentype"),
+    /* Internet Explorer */ url("../font/CascadiaCode.ttf") format("woff2"),
+    /* Super Modern Browsers */ url("../font/CascadiaCode.ttf") format("woff"),
+    /* Pretty Modern Browsers */ url("../font/CascadiaCode.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../font/CascadiaCode.ttf") format("svg"); /* Legacy iOS */
 }
 
 @font-face {
-    font-family: 'CascadiaCodeSB';
-    src: url('../font/CascadiaCode-SemiBold.ttf') format('embedded-opentype'), /* Internet Explorer */
-         url('../font/CascadiaCode-SemiBold.ttf') format('woff2'),             /* Super Modern Browsers */
-         url('../font/CascadiaCode-SemiBold.ttf') format('woff'),              /* Pretty Modern Browsers */
-         url('../font/CascadiaCode-SemiBold.ttf') format('truetype'),          /* Safari, Android, iOS */
-         url('../font/CascadiaCode-SemiBold.ttf') format('svg');               /* Legacy iOS */
+  font-family: "CascadiaCodeSB";
+  src: url("../font/CascadiaCode-SemiBold.ttf") format("embedded-opentype"),
+    /* Internet Explorer */ url("../font/CascadiaCode-SemiBold.ttf")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../font/CascadiaCode-SemiBold.ttf")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("../font/CascadiaCode-SemiBold.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../font/CascadiaCode-SemiBold.ttf")
+      format("svg"); /* Legacy iOS */
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    font-family: "CascadiaCode", sans-serif;
-    background-color: #77a6b6;
-    color: #333;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "CascadiaCode", sans-serif;
+  background-color: #0b132b;
+  color: #333;
+  font-size: 16px;
 }
 
 .hide {
-    /* '!important' is to make sure that when we add the class using JS, it takes precendence */
-    display: none !important;
+  /* '!important' is to make sure that when we add the class using JS, it takes precendence */
+  display: none !important;
 }
 
 .view-repos {
-    margin-top: 1.5em;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    align-self: center;
-    width: 300px;
+  margin-top: 1.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  align-self: center;
+  width: 300px;
 }
 
 .fa-github-alt {
-    color: #eabda8;
+  color: #86bbd8;
 }
-
 
 h1 {
-    width: 90%;
-    padding: 1em 0.5em;
-    margin: 0;
-    font-size: 3em;
-    text-align: center;
-    font-family: "CascadiaCodeSB", sans-serif;
-    background-color: #4d7298;
-    color: #d0efb1;
-    text-transform: none;
-    border: 4px solid #f7f3e3;
-border-radius: 20px;
-
+  width: 90%;
+  padding: 1em 0.5em;
+  margin: 0;
+  font-size: 3em;
+  text-align: center;
+  font-family: "CascadiaCodeSB", sans-serif;
+  background-color: #3a506b;
+  color: #e7dfc6;
+  text-transform: none;
+  border: 4px solid #e7dfc6;
+  border-radius: 20px;
 }
 
-
 .github-img {
-    width: 45px;
-    margin-right: 8px;
+  width: 45px;
+  margin-right: 8px;
 }
 
 h3 {
-    width: auto;
-    text-align: center;
-    color: #f7f3e3;
+  width: auto;
+  text-align: center;
+  color: #e7dfc6;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 90%;
-    margin-top: 50px;
-    max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+  margin-top: 50px;
+  max-width: 1200px;
 }
 
 .intro,
 .repos {
-    width: 100%;
+  width: 100%;
 }
 
-.user-info {  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #43423d;
-    color: #f7f3e3;
-    width: 90%;
-    font-size: 1em;
-    padding-bottom: 0;
-    padding: 0 32px;   
-    border: 4px solid #f7f3e3; 
-    border-radius: 20px;
-margin: 10px;
+.user-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #43423d;
+  color: #e7dfc6;
+  width: 90%;
+  font-size: 1.15em;
+  padding-bottom: 0;
+  padding: 0 32px;
+  border: 4px solid #e7dfc6;
+  border-radius: 20px;
+  margin: 10px;
 }
 
 .user-info figure {
-    max-width: 200px;
-    margin: 10px;
+  max-width: 200px;
+  margin: 10px;
 }
 
 .overview {
-    display: flex;
-justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .user-info img {
-    border-radius: 20px;
-    max-width: 125%;
-    height: auto;
-    border: 4px solid #f7f3e3;
-
+  border-radius: 20px;
+  max-width: 125%;
+  height: auto;
+  border: 4px solid #e7dfc6;
 }
 
 .user-info div {
-    margin-top: 2em;
-    display: inline-flex;
-    text-align: center;
-    flex-wrap: wrap;
-    height: auto;
+  margin-top: 2em;
+  display: inline-flex;
+  text-align: center;
+  flex-wrap: wrap;
+  height: auto;
 }
 
 .user-info p {
-    width: 90%;
-    margin: 0;
-    size: auto;
+  width: 90%;
+  margin: 0;
+  size: auto;
 }
 
 .filter-repos {
-    background: #43423d;
-    border-radius: 10px;
-    color: #f7f3e3;
-    text-align: center;
-    width: 300px;
-    margin-top: 1em;
-    padding: 1em;
-    border: 4px solid #f7f3e3;
+  background: #43423d;
+  border-radius: 10px;
+  color: #e7dfc6;
+  text-align: center;
+  width: 300px;
+  margin-top: 1em;
+  padding: 1em;
+  border: 4px solid #e7dfc6;
 }
 
 .repo-data {
-    background-color: #4d7298;
-    padding: 2em;
-    padding-bottom: 1em;
-    border: 4px solid #f7f3e3;
+  background-color: #38506b;
+  padding: 2em;
+  padding-bottom: 1em;
+  border: 4px solid #e7dfc6;
 }
 
 .repos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #4d7298;
-    width: 90%;
-    margin-top: 0;
-    padding: 1em;
-    border: 4px solid #f7f3e3;
-    border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #3a506b;
+  width: 90%;
+  margin-top: 0;
+  padding: 1em;
+  border: 4px solid #e7dfc6;
+  border-radius: 20px;
 }
 
-
 .repo-list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .repo-list li {
-
-    width: 90%;
-    margin: 1em 0;
-    border: 4px solid #f7f3e3;
-    border-radius: 10px;
-    background: #77a6b6;
-    align-items:  center;
-    justify-content: center;
-    padding: 0.5em;
+  width: 90%;
+  margin: 1em 0;
+  border: 4px solid #e7dfc6;
+  border-radius: 10px;
+  background: #1c2541;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
 }
 
 .repo-list li:hover {
-    background:#90c8dc;
-    cursor: pointer;
+  background: #86bbd8;
+  cursor: pointer;
 }
 
 .repo-list h3 {
-    text-align: center;
-
+  text-align: center;
 }
 
 .repo-list h3:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .repo-list p {
-    padding: 0em 0.5em;
-    margin: 0.5em 0;
+  padding: 0em 0.5em;
+  margin: 0.5em 0;
 }
 
 section.repo-data {
-    color: #f7f3e3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 90%;
-    padding: 0;
-    margin:0;
-    border-radius:20px;
+  color: #e7dfc6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px;
 }
 
 .repo-data h3 {
-    text-align: left;
+  text-align: left;
 }
 
 .repo-data .visit {
-    text-decoration: none;
-    max-width: 225px;
-    color: #fff;
-    padding: 0.75em;
-    margin-top: 20px;
-    cursor: pointer;
-    display: block;
-    background-color: #61988e;
-    border: 1px solid #f7f3e3;
-    border-radius: 5px;
+  text-decoration: none;
+  max-width: 225px;
+  color: #fff;
+  padding: 0.75em;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  background-color: #61988e;
+  border: 1px solid #e7dfc6;
+  border-radius: 5px;
 }
 
 .repo-data .visit:hover {
-    background-color: #2f2550;
-    border: 1px solid #ccc;
+  background-color: #2f2550;
+  border: 1px solid #ccc;
 }
 
 .buttons {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 .button-container {
-display: inline-flex;
-justify-content: center;
-    width: 100%;
-    background-color: #77a6b6;
-    margin-top: 10px;
-    padding-left: 2em;
-    padding-bottom: 2em;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #0b132b;
+  margin-top: 10px;
+  padding-left: 2em;
+  padding-bottom: 2em;
 }
 
 .view-repos {
-    max-width: 200px;
-    margin-top: 0;
+  max-width: 200px;
+  margin-top: 0;
 }
 
-
 @media (min-width: 700px) {
-    .user-info div {
-        width: 45%;
-        text-align: left;
-    }
+  .user-info div {
+    width: 45%;
+    text-align: left;
+  }
 
-    .repo-list {
-        justify-content: space-between;
-    }
+  .repo-list {
+    justify-content: space-between;
+  }
 
-    .repo-list li {
-        width: 48%;
-    }
+  .repo-list li {
+    width: 48%;
+  }
 }
 
 @media (max-width: 700px) {
-    .user-info div p {
-        margin: 10px;
-    }
+  .user-info div p {
+    margin: 10px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .repo-list li {
-        width: 30%;
-    }
+  .repo-list li {
+    width: 30%;
+  }
 }
 
 strong {
-    color: #eabda8;
+  color: #eabda8;
 }
