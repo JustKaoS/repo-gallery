@@ -4,7 +4,7 @@ const reposElement = document.querySelector(".repos");
 const repoData = document.querySelector(".repo-data");
 const button = document.querySelector(".view-repos");
 const filterInput = document.querySelector(".filter-repos");
-const username = `justkaos`;
+const username = `JustKaoS`;
 
 // Fetches Github user data for username
 const gitFetch = async function () {
